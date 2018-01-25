@@ -1,0 +1,300 @@
+body {
+	font: 14px Arial,Helvetica,sans-serif;
+    color: #222;
+    box-sizing: border-box;
+    padding: 0;
+	margin: 0;
+}
+
+*{
+	outline: none;
+	box-sizing: border-box;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+.header {
+	height: 70px;
+	position: relative;
+}
+
+.logo {
+	background: url('../images/logo.svg') no-repeat;
+	width: 175px;
+	height: 26px;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+.timeline {
+	height: 45px;
+	position: relative;
+	border-top: 1px solid #e9ecef;
+	border-bottom: 1px solid #e9ecef;
+}
+
+/* Кнопки */
+.blue_btn {
+	background: #007dff;
+	color: #fff;
+	padding: 12px 15px;
+	border-radius: 5px;
+}
+
+.blue_btn:hover {
+	background: #0058ff;
+}
+
+.blue_btn:active {
+	background: #0011fe;
+}
+
+.header_btn {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+.date_block {
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.round_btn {
+	background: #e9ecef;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+	color: #888;
+}
+
+.round_btn:hover i {color: #000;}
+
+.data_choise {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.time_block {
+	height: 45px;
+	width: calc(100% - 245px);
+	float: right;
+	display: flex;
+	align-items: center;
+}
+
+.top_cloak {
+	text-align: center;
+	font-weight: bold;
+}
+
+.disable {color: #999}
+
+/* Этаж */
+.floor,
+.timeline {
+	display: table;
+	width: 100%;
+}
+
+.cloak,
+.floor_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.floor > div {display: table-cell; border: 1px solid #e9ecef}
+
+.floor .left,
+.timeline .left {
+	padding: 10px 0 10px 25px;
+	width: 245px;
+}
+	
+.cloak .left {
+	padding: 0;
+}
+
+.cell {
+	background: #f6f7f9;
+	position: relative;
+	border-left: 1px solid #dee7f4;
+	border-right: 1px solid #dee7f4;
+	border-bottom: 1px solid #dee7f4;
+}
+
+.room_name,
+.floor_title {
+	font-weight: bold;
+}
+
+.floor_title {
+	color: #999;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+
+.floor .left span {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.left.floor_title {
+	padding-top: 20px;
+}
+
+.floor .left a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.floor .left a:hover {
+	color: #007dff;
+}
+
+.floor tr {position: relative}
+
+.floor .left a:active {
+	color: #00c;
+}
+
+.room_name {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.floor .left .room_capacity {margin-bottom: 0}
+
+.floor .left .dash {
+	display: inline;
+	padding: 0 1px;
+}
+
+.test {
+	background: #b5cde5;
+	position: absolute;
+	z-index: 2;
+	opacity: .5;
+	width: 120%;
+	height: 60px;
+	top: 0;
+	left: calc(200% + 2px);
+	cursor: pointer;
+}
+
+.test:hover {
+	background: #7daad7;
+}
+
+.test.two {
+	width: 150%;
+	left: calc(700% + 7px);
+}
+
+.test.done {
+	opacity: 1;
+	background: url(../images/done_bg.png);
+}
+
+.test.done:hover {background: #13314f}
+
+.test.done div {
+	position: relative;
+	z-index: 50;
+	display: none;
+	top: 20px;
+	left: -120%;
+	padding: 17px;
+	padding-bottom: 10px;
+	width: 400px;
+	color: #000;
+	border-radius: 10px;
+	box-shadow: 3px 3px 15px #c2cad2;
+}
+
+.test.done div > span {
+	display: block;
+	line-height: 1.5;
+}
+
+.test.done div .round_btn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.test.done:hover div {
+  position: absolute;
+  display: block;
+  margin-left: 0;
+  background: #fff;
+}
+
+.done .title {font-weight: bold}
+.done .info {font-size: 13px;}
+
+.done .persons {
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	font-size: 13px;
+}
+
+.small_ava {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	background: url("../images/small_ava.png") no-repeat;
+	vertical-align: top;
+	margin-right: 2px;
+	position: relative;
+	top: -2px;
+}
+
+.test.all {
+	left: 0;
+	width: calc(1510% + 15px);
+}
+
+.test_marker {
+	justify-content: center;
+	align-items: center;
+	background: #007dff;
+	border-radius: 15px;
+	position: absolute;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	width: 55px;
+	left: 36%;
+	height: 26px;
+	color: #fff;
+	top: 9px;
+}
+
+.test_line {
+	width: 1px;
+	height: 360px;
+	position: absolute;
+	background: #007dff;
+	z-index: 3;
+	left: 50%;
+}
+
+.floor_table tr:hover td:not(.left) {
+	background: #eff2f6;
+	cursor: pointer;
+}
