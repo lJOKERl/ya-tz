@@ -217,7 +217,7 @@ button {
 	position: relative;
 	z-index: 50;
 	display: none;
-	top: 20px;
+	top: 30px;
 	left: -120%;
 	padding: 17px;
 	padding-bottom: 10px;
@@ -225,6 +225,20 @@ button {
 	color: #000;
 	border-radius: 10px;
 	box-shadow: 3px 3px 15px #c2cad2;
+}
+
+.test.done div:before {
+	position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #fff transparent;
+    border-width: 0 8px 8px;
+    content: "";
+    display: block;
 }
 
 .test.done div > span {
